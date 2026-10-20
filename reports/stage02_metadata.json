@@ -1,0 +1,26 @@
+{
+  "dataset": "Parma 2023 (Mendeley 35wh56287y/2), data ZIP verified by user",
+  "join": "hourly observed soil data + backward asof latest env up to 90 minutes old",
+  "features": [
+    "soil_humidity",
+    "soil_temperature",
+    "soil_electrical_conductivity",
+    "env_co2",
+    "env_humidity",
+    "env_pressure",
+    "env_temperature"
+  ],
+  "train_before_utc": "2023-08-14T00:00:00+00:00",
+  "validation_from_utc": "2023-08-15T00:00:00+00:00",
+  "validation_before_utc": "2023-08-29T00:00:00+00:00",
+  "test_from_utc": "2023-08-30T00:00:00+00:00",
+  "embargo_hours": 24,
+  "class_semantics": "irrigation assignments, not physiological stress",
+  "limitations": [
+    "one farm and year",
+    "one physical line per treatment",
+    "shared environmental device",
+    "timestamps/windows are NOT independent treatment replicates",
+    "no causal inference"
+  ]
+}

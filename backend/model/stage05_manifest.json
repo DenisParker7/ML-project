@@ -1,0 +1,62 @@
+{
+  "project": "RC3SI",
+  "stage": "05 Frozen Held-Out Test Evaluation",
+  "evaluated_at_utc": "2026-10-20T17:09:56.231228+00:00",
+  "dataset_description": "Parma 2023 one-farm one-season known physical lines",
+  "target_definition": "0=100%-irrigation Line 1; 1=30%-irrigation Line 3",
+  "NOT_a_stress_diagnosis": true,
+  "NOT_early_warning_verified": true,
+  "model_source": "Stage 04 frozen validation-selected TRAIN-only model",
+  "model_family": "HistGradientBoosting",
+  "features_ordered": [
+    "soil_humidity_lag_1h",
+    "soil_humidity_lag_6h",
+    "soil_humidity",
+    "soil_humidity_lag_3h",
+    "soil_humidity_prev_3h_mean",
+    "soil_humidity_prev_6h_mean",
+    "soil_electrical_conductivity",
+    "soil_humidity_change_3h",
+    "soil_humidity_change_1h",
+    "soil_temperature"
+  ],
+  "threshold": 0.5,
+  "model_selection": "Stage 04 validation F1, no test tuning",
+  "train_size": 2165,
+  "validation_size": 660,
+  "test_size": 706,
+  "test_metrics": {
+    "accuracy": 0.8215297450424929,
+    "balanced_accuracy": 0.821529745042493,
+    "precision": 1.0,
+    "recall": 0.6430594900849859,
+    "f1": 0.7827586206896552,
+    "roc_auc": 0.9215144973477036,
+    "average_precision": 0.944348999188916,
+    "mcc": 0.6884068321836131,
+    "log_loss": 0.5233028890147557,
+    "brier_score": 0.12968095663660426
+  },
+  "confusion_matrix_rows_true_cols_pred": [
+    [
+      353,
+      0
+    ],
+    [
+      126,
+      227
+    ]
+  ],
+  "source_zip_sha256": {
+    "RC3SI_Stage03_Outputs_v1.zip": "2952dd24e19d61ae9f98ee249dee29e7818e41f7c5b3dd46026167be42e04ae5",
+    "RC3SI_Stage04_Outputs_v1.zip": "1ad9cb3b15b339ed10ccdce2695b05d06b9db165ad9fd7f0d9c386b5bfc0303c"
+  },
+  "sklearn_version": "1.6.1",
+  "limitations": [
+    "single season and field",
+    "one line per treatment means line/treatment confounding",
+    "temporal dependence: hourly rows are not independent replication",
+    "no physiological stress or event-onset labels",
+    "no guarantee of generalization to unseen lines, years or farms"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "features_ordered": [
+    "soil_humidity_lag_1h",
+    "soil_humidity_lag_6h",
+    "soil_humidity",
+    "soil_humidity_lag_3h",
+    "soil_humidity_prev_3h_mean",
+    "soil_humidity_prev_6h_mean",
+    "soil_electrical_conductivity",
+    "soil_humidity_change_3h",
+    "soil_humidity_change_1h",
+    "soil_temperature"
+  ],
+  "threshold": 0.5,
+  "positive_class": "30%-irrigation line; NOT measured stress"
+}

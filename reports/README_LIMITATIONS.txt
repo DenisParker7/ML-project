@@ -1,0 +1,1 @@
+For demonstration: one farm, one season (2023), one physical line per treatment; this is historical irrigation-pattern classification, not measured stress detection or early warning. Model is frozen from Stage 04. To use live API, compute exactly the same historical features in chronological order and validate schema and units. Only load trusted joblib artifacts.
